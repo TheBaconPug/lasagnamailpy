@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: lasagnamail
+Version: 0.0.1
+Summary: A wrapper for the site lasagna.email
+Author: TheBaconPug
+Project-URL: Homepage, https://github.com/TheBaconPug/lasagnamailpy
+Keywords: python,email,lasagna,tempmail,disposable email,lasagnamail
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# A python wrapper for lasagna.email
+
+``pip install lasagnamail`` 
+
+```py
+from lasagnamail import LasagnaMail
+
+client = LasagnaMail()
+
+address = client.createAddress()
+print(address)
+
+inbox = client.getInbox()
+print(inbox)
+
+email = client.waitForEmail()
+print(email)
+
+```
