@@ -1,11 +1,10 @@
 from string import ascii_lowercase
+from random import choice
 from time import sleep
 import requests
-import random
-import string
 
 def randAddress():
-    return "".join(random.choice(ascii_lowercase) for _ in range(10)) + "@lasagna.email"
+    return "".join(choice(ascii_lowercase) for _ in range(10)) + "@lasagna.email"
 
 class LasagnaMail:
     def __init__(self):
